@@ -17,8 +17,7 @@ else:
 
 env.BuildDir(build_dir, 'src/', duplicate=0)
 
-env.Append(CXXFLAGS = ['-march=native'])
-env.Append(CXXFLAGS = ['-Wno-write-strings'])
+env.Append(CXXFLAGS = ['-march=native','-Wno-write-strings','-D__STDC_CONSTANT_MACROS'])
 env.Append(LINKFLAGS = ['-Wl,--no-undefined'])
 
 
